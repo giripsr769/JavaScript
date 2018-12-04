@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+<head>
+	<title>JavasScript</title>
+</head>
+
+<body>
+	<script language="javascript" type="text/javascript">
+/*		
+	 // Dialog box
+		var check = confirm("Hello !");
+		document.write(check);
+		
+		var prom = prompt("Enter any Name");
+		alert("Name :"+ prom)
+*/
+	
+/*	
+	// operator
+	    //Arithmetic
+		var num1 = 10 , num2 = 15;
+		var num1 = ++num1 ;     // unary operator = num1++(post) ,++num1(pre)
+		var total = num1 + num2;
+		document.write("num1 :"+num1 +"<br/>");
+		document.write("num2 :"+num2 +"<br/>");
+		document.write("total :"+total +"<br/>");
+		document.write("<br/>");
+		
+		//Comparisom
+		var comp = 100;
+		document.write(comp == 10 );//false
+		document.write("<br/>");
+		document.write(comp >  10 );//true
+		document.write("<br/>");
+		document.write(comp <  10 );//false
+		document.write("<br/>");
+		document.write(comp >= 10 );//true
+		document.write("<br/>");
+		document.write(comp <= 10 );//false
+		document.write("<br/>");
+		document.write(comp != 10 );//true
+		document.write("<br/>");
+		
+		//Logical
+		var usrId = prompt("Enter User name : ");
+		var pswd = prompt("Enter Password : ");
+		var resultAnd = (usrId == "Giri" && pswd == "769" ) ? "Welcome" : "Invalid User";
+		alert(resultAnd);
+		var resultOr = (usrId == "Giri" || pswd == "769" ) ? "Welcome" : "Invalid User";
+		alert(resultOr);
+		var resultOr = !(usrId == "Giri" || pswd == "769" ) ? "Welcome" : "Invalid User";
+		alert(resultOr);
+*/
+/*		//If..Else..
+		var maths = parseInt(prompt("Enter Maths Mark :","Maths marks"));
+		var phy = parseInt(prompt("Enter Physics Mark :","Physics marks"));
+		var comp = parseInt(prompt("Enter Computer Mark :","Computer marks"));
+		
+		var totalMark = maths + phy + comp ;
+		var percentage = totalMark * 100 / 300;
+		
+		if(percentage >= 80){
+		alert(" GRADE-A ");
+		}
+		else if(percentage >= 70){
+		alert(" GRADE-B ");
+		}
+		else if(percentage >= 60){
+		alert(" GRADE-C ");
+		}
+		else if(percentage >= 50){
+		alert(" GRADE-D ");
+		}
+		else 
+		{
+		alert(" GRADE-F ");
+		}
+*/ 		
+
+/*		// String
+		var strName = 'Hello World private company';
+		var strAddress = 'pondicherry chennai India';
+		
+		document.write("Name :" + strName);
+		document.write("<br/>");
+		document.write("Address :" + strAddress);
+		document.write("<br/><br/>");
+		document.write("Name.charAt:" + strName.charAt(6));
+		document.write("<br/><br/>");
+		document.write("Name.charCodeAt :" + strName.charCodeAt(6));
+		document.write("<br/><br/>");
+		document.write("Name.concat(Address):" + strName.concat(strAddress));
+		document.write("<br/><br/>");
+		document.write("Name.indexOf(Address):" + strName.indexOf("r"));
+		document.write("<br/><br/>");
+		document.write("Name.toLowerCase(Address):" + strName.toLowerCase());
+		document.write("<br/><br/>");
+		document.write("Name.toUpperCase(Address):" + strName.toUpperCase());
+		document.write("<br/><br/>");
+		document.write("Name.Split(Address):" + strName.split(" ",3));
+*/
+/*		//Switch
+		var vowels = prompt("Enter any Character :");
+		
+		switch(vowels) 
+		{
+			case 'a' : 
+			case 'e' :
+			case 'i' :
+			case 'o' :
+			case 'u' :
+				document.write( vowels + " is a Vowels");
+				break;
+			default :
+				document.write("Consonant or Special Character");
+				break;
+		}
+*/		
+
+/*		// for 
+		var i ;
+		var input = parseInt(prompt("Enter the Value : "));
+		
+		for(i=0; i<=input; i++)
+		{
+			document.write("Value of I ="+ i +"<br/>");
+		}
+*/
+
+/*		//Array (sorting in Ascending & decending order)
+		
+		let myArray = [1,8,5,6,7,9,2,3];
+		var i, j, swapping;
+
+		document.write("Before Sorting  into Acending order","<br/>");
+		
+		
+			for( i = 0; i < myArray.length; i++)
+			{
+				document.write(myArray[i]+ "<br/>");
+			}
+
+			for( i = 0; i < myArray.length; i++)
+				{
+					for(j = 0; j < myArray.length-1; j++)
+						{
+							if(myArray[j] < myArray[j+1])
+								{
+									swapping     = myArray[j];
+									myArray[j]   = myArray[j+1];
+									myArray[j+1] = swapping;
+								}
+						}
+			
+				}
+			
+		document.write("After Sorting  into Acending order","<br/>");
+			
+			for( i = 0; i < myArray.length; i++)
+			{
+				document.write(myArray[i]+ "<br/>");
+			}
+*/	
+
+/*		// while
+		var input = parseInt(prompt("Enter the value : "));
+		var count = 0;
+		
+		while(input > 0)
+		{
+			input = Math.trunc(input / 10);
+			count ++ ;
+		}
+		document.write(count);
+*/
+
+		// do..While loop	
+		let correctPin = "2589";
+		var pin ;
+		var count = 0;
+		
+		do
+		{
+			pin = prompt("Enter the PIN number");		
+			count++;
+			if(count == 2){
+				alert("Final Attempt: MAX no.of  ATTEMPT is '3' ");
+			}
+		}
+		while(pin != correctPin && count < 3);
+		
+			
+			if(pin == correctPin)
+			{
+				document.write("Welcome User !!!"); 
+			}
+			else
+			{
+				
+				document.write("User Account Locked");
+			}
+
+	</script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
