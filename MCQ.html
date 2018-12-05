@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>MCQ sample</title>
+</head>
+<body>
+<div>
+<p id="question"></p>
+<div id="optionGroup"> 
+
+</div>
+
+<button id="next" onclick="loadPrev();">Previous</button>
+
+<button id="next" onclick="loadNext();">Next</button>
+</div>
+</body>
+<script>
+var mcqCount = 0;
+var mcq=[
+{question: '1.question content here', options:['option1.1', 'option1.2','option1.3'], curAnswer: 0},
+{question: '2.question content here', options:['option2.1', 'option2.2'], curAnswer: 1},
+{question: '3.question content here', options:['option3.1', 'option3.2'], curAnswer: 0}
+]
+
+function loadQuestion() {
+
+document.getElementById("question").innerHTML = mcq[mcqCount].question;
+var temp = "";
+
+for(var i in mcq[mcqCount].options) {
+temp = temp+ '<input name="radop" type="radio" id="rg'+i+'" value="0"><span id="option_'+i+'">'+mcq[mcqCount].options[i]+'</span>'
+
+}
+document.getElementById("optionGroup").innerHTML = temp;
+}
+
+function loadNext() {
+	if(mcqCount<mcq.length-1) {
+			mcqCount++;
+		loadQuestion();
+		} 
+	
+}
+function loadPrev() {
+	if(mcqCount>0) {
+		mcqCount--;
+		loadQuestion();
+	} 
+}
+loadQuestion();
+</script>
+</html>
+
